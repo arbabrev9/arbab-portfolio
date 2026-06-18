@@ -167,7 +167,7 @@ export default function Index() {
                 Email Me
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/arbab-sikandar-khan-6aa251215/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg font-medium hover:bg-secondary transition-colors"
@@ -316,7 +316,7 @@ export default function Index() {
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/arbab-sikandar-khan-6aa251215/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center p-6 bg-white rounded-xl border border-border hover:border-primary hover:shadow-md transition-all"
