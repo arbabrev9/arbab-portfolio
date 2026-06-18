@@ -178,49 +178,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="bg-secondary/30 py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">Experience</h2>
-
-          <div className="space-y-8">
-            {experiences.map((exp, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-xl p-8 border border-border hover:border-primary/30 transition-colors"
-              >
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground">
-                      {exp.title}
-                    </h3>
-                    <p className="text-primary font-semibold">{exp.company}</p>
-                  </div>
-                  <span className="text-muted-foreground text-sm whitespace-nowrap">
-                    {exp.period}
-                  </span>
-                </div>
-
-                <p className="text-foreground mb-4 leading-relaxed">
-                  {exp.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {exp.highlights.map((highlight, hidx) => (
-                    <span
-                      key={hidx}
-                      className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium"
-                    >
-                      ✓ {highlight}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Featured Projects Section */}
       <section className="py-20 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-6">
@@ -285,6 +242,49 @@ export default function Index() {
                       </div>
                     ))}
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="bg-secondary/30 py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">Experience</h2>
+
+          <div className="space-y-8">
+            {experiences.map((exp, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-xl p-8 border border-border hover:border-primary/30 transition-colors"
+              >
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">
+                      {exp.title}
+                    </h3>
+                    <p className="text-primary font-semibold">{exp.company}</p>
+                  </div>
+                  <span className="text-muted-foreground text-sm whitespace-nowrap">
+                    {exp.period}
+                  </span>
+                </div>
+
+                <p className="text-foreground mb-4 leading-relaxed">
+                  {exp.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {exp.highlights.map((highlight, hidx) => (
+                    <span
+                      key={hidx}
+                      className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium"
+                    >
+                      ✓ {highlight}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
