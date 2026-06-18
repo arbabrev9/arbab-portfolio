@@ -1,4 +1,5 @@
 import { Mail, Linkedin, Phone, ArrowRight, ExternalLink } from "lucide-react";
+import { FocusTrackerMockup, RevSlackMockup } from "@/components/ProjectMockups";
 
 export default function Index() {
   const projects = [
@@ -38,6 +39,7 @@ export default function Index() {
         "Automated task creation & follow-ups",
         "Improved team productivity",
       ],
+      component: RevSlackMockup,
     },
     {
       title: "Focus Tracker",
@@ -49,6 +51,7 @@ export default function Index() {
         "Automated payroll integration",
         "Built for internal operational use",
       ],
+      component: FocusTrackerMockup,
     },
     {
       title: "Swag Print - Proof of QA",
@@ -202,6 +205,12 @@ export default function Index() {
                         alt={project.title}
                         className="w-full h-auto object-cover"
                       />
+                    </div>
+                  </div>
+                ) : project.component ? (
+                  <div className="w-full md:w-1/2 flex-shrink-0">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white p-6">
+                      <project.component />
                     </div>
                   </div>
                 ) : (
