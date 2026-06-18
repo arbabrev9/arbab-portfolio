@@ -105,20 +105,6 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-white text-foreground">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-            ASK
-          </div>
-          <a
-            href="#connect"
-            className="px-4 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
-          >
-            Get in Touch
-          </a>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-32">
@@ -278,23 +264,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-primary to-blue-600 py-16 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to collaborate?
-          </h2>
-          <p className="text-lg opacity-90 mb-8">
-            Let's talk about how I can help drive your product vision forward.
-          </p>
-          <a
-            href="#connect"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:shadow-lg transition-all"
-          >
-            Get in Touch <ArrowRight size={20} />
-          </a>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section id="connect" className="py-20 bg-secondary/30">
