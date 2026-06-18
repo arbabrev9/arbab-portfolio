@@ -12,7 +12,8 @@ export default function Index() {
         "Integrated with e-commerce platforms",
         "Delivered real-time AI color matching",
       ],
-      gradient: "from-blue-500 to-cyan-500",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2F1a74e62e97b24ff2808f58db375cb641?format=webp&width=800&height=1200",
     },
     {
       title: "MessProof AI",
@@ -24,7 +25,8 @@ export default function Index() {
         "Unified research + creative + ads process",
         "Built for a US-based digital agency",
       ],
-      gradient: "from-purple-500 to-pink-500",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2F43488a6f015f48a99945f2c43440394a?format=webp&width=800&height=1200",
     },
     {
       title: "RevSlack AI",
@@ -36,7 +38,6 @@ export default function Index() {
         "Automated task creation & follow-ups",
         "Improved team productivity",
       ],
-      gradient: "from-orange-500 to-red-500",
     },
     {
       title: "Focus Tracker",
@@ -48,7 +49,6 @@ export default function Index() {
         "Automated payroll integration",
         "Built for internal operational use",
       ],
-      gradient: "from-green-500 to-teal-500",
     },
     {
       title: "Swag Print - Proof of QA",
@@ -60,7 +60,8 @@ export default function Index() {
         "Improved order accuracy",
         "Streamlined production workflow",
       ],
-      gradient: "from-indigo-500 to-blue-500",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2Ff4b33c8dc3694286b89035fb5e5b5efa?format=webp&width=800&height=1200",
     },
   ];
 
@@ -221,39 +222,66 @@ export default function Index() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+      <section className="py-20 bg-secondary/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16">
             Featured Projects
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="space-y-16">
             {projects.map((project, idx) => (
               <div
                 key={idx}
-                className="group relative bg-gradient-to-br p-0.5 rounded-xl hover:shadow-xl transition-all duration-300"
-                style={{
-                  background: `linear-gradient(135deg, hsl(${
-                    210 + idx * 20
-                  }deg, 70%, 50%), hsl(${240 + idx * 20}deg, 80%, 60%))`,
-                }}
+                className={`flex flex-col ${
+                  idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                } gap-8 items-center`}
               >
-                <div className="relative bg-white rounded-xl p-6 h-full">
-                  <div className="text-sm font-semibold text-primary mb-2">
+                {/* Image Section */}
+                {project.image ? (
+                  <div className="w-full md:w-1/2 flex-shrink-0">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="w-full md:w-1/2 flex-shrink-0">
+                    <div className="relative rounded-2xl bg-gradient-to-br from-slate-200 to-slate-300 aspect-video flex items-center justify-center">
+                      <div className="text-center text-slate-600">
+                        <p className="font-semibold">{project.title}</p>
+                        <p className="text-sm">Project Visualization</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Content Section */}
+                <div className="w-full md:w-1/2">
+                  <div className="inline-block mb-3 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide">
                     {project.category}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-foreground">
+                  <h3 className="text-3xl font-bold mb-4 text-foreground">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  <p className="text-foreground text-base mb-6 leading-relaxed">
                     {project.description}
                   </p>
 
-                  <div className="space-y-1">
+                  <div className="space-y-3">
+                    <p className="font-semibold text-foreground text-sm uppercase tracking-wide">
+                      Key Impact
+                    </p>
                     {project.impact.map((item, iidx) => (
-                      <div key={iidx} className="flex items-start gap-2 text-sm">
-                        <span className="text-primary font-bold mt-1">•</span>
-                        <span className="text-muted-foreground">{item}</span>
+                      <div key={iidx} className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                          <span className="w-2 h-2 rounded-full bg-primary"></span>
+                        </div>
+                        <span className="text-muted-foreground text-sm">
+                          {item}
+                        </span>
                       </div>
                     ))}
                   </div>
