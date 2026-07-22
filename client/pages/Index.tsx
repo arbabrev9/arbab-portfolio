@@ -1,7 +1,34 @@
 import { Mail, Linkedin, Phone, ArrowRight, ExternalLink } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { FocusTrackerMockup, RevSlackMockup } from "@/components/ProjectMockups";
 
 export default function Index() {
+  const [visibleProjects, setVisibleProjects] = useState<number[]>([]);
+  const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute("data-project-index"));
+            setVisibleProjects((current) =>
+              current.includes(index) ? current : [...current, index],
+            );
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 },
+    );
+
+    projectRefs.current.forEach((project) => {
+      if (project) observer.observe(project);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const projects = [
     {
       title: "Color Match AI",
@@ -192,9 +219,16 @@ export default function Index() {
             {projects.map((project, idx) => (
               <div
                 key={idx}
-                className={`flex flex-col ${
+                ref={(element) => {
+                  projectRefs.current[idx] = element;
+                }}
+                data-project-index={idx}
+                className={`project-card ${
+                  visibleProjects.includes(idx) ? "is-visible" : ""
+                } flex flex-col ${
                   idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 } gap-8 items-center`}
+                style={{ transitionDelay: `${idx * 80}ms` }}
               >
                 {/* Image Section */}
                 {project.image ? (
