@@ -371,6 +371,95 @@ export default function Index() {
         </div>
       </section>
 
+      {/* About Me Section */}
+      <section className="bg-[#f4f4ef] px-6 py-16 text-[#17201e] md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+          <div className="flex flex-col justify-center">
+            <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.24em] text-[#69736e]">
+              02 / About Me
+            </p>
+            <h2 className="max-w-xl text-5xl font-semibold leading-[0.94] tracking-[-0.06em] md:text-7xl">
+              I don’t just manage <em className="font-serif font-normal text-[#52755e]">feature requests.</em>
+            </h2>
+            <p className="mt-8 max-w-xl text-sm leading-6 text-[#5d6862] md:text-base md:leading-7">
+              I am a Product Manager working at the intersection of business, users, and technology. My work focuses on understanding complex problems, defining product opportunities, creating structured requirements, aligning stakeholders, and working with design and engineering teams to turn ideas into usable digital products.
+            </p>
+
+            <div className="mt-8 border-t border-[#d8d9d1] pt-5">
+              <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#69736e]">
+                Particularly interested in
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "SaaS products",
+                  "AI-powered products",
+                  "Web & mobile",
+                  "B2B platforms",
+                  "Enterprise systems",
+                  "E-commerce",
+                  "Data-driven experiences",
+                ].map((interest) => (
+                  <span
+                    key={interest}
+                    className="rounded-full border border-[#d8d9d1] bg-white/70 px-3 py-1.5 text-[11px] text-[#68736d]"
+                  >
+                    {interest}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-[1.5rem] bg-[#e8eee7] p-6 md:p-8">
+            <div className="mb-5 flex items-start justify-between">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#69736e]">
+                  The Product Lifecycle
+                </p>
+                <p className="mt-2 text-xs text-[#7c8780]">
+                  How I move from a question to an outcome
+                </p>
+              </div>
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#17201e] text-[#c4ff50]">↘</span>
+            </div>
+
+            <div className="space-y-2">
+              {[
+                "Problem",
+                "Discovery",
+                "Strategy",
+                "Requirements",
+                "Design & Engineering",
+                "Launch",
+                "Iteration",
+              ].map((step, index) => (
+                <div key={step} className="flex items-center gap-3">
+                  <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[9px] font-medium ${index === 6 ? "bg-[#17201e] text-[#c4ff50]" : "border border-[#cdd7ce] bg-white/80 text-[#78847c]"}`}>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div className={`flex-1 rounded-md px-4 py-2.5 text-xs font-medium ${index === 6 ? "bg-[#17201e] text-white" : "bg-white/75 text-[#526058]"}`}>
+                    {step}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-7 grid grid-cols-3 gap-3 border-t border-[#d2dcd2] pt-5">
+              {[
+                ["Why", "Understand the root problem"],
+                ["Who", "Design for real people"],
+                ["Success", "Measure the right outcome"],
+              ].map(([label, text]) => (
+                <div key={label}>
+                  <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#7a867e]">{label}</p>
+                  <p className="mt-2 text-[10px] leading-4 text-[#647169]">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Experience Section */}
       <section className="bg-secondary/30 py-20">
         <div className="max-w-6xl mx-auto px-6">
