@@ -74,6 +74,18 @@ export default function Index() {
   const experiences = [
     {
       title: "Product Manager",
+      company: "Opulent Home Interiors",
+      period: "June 2023 - Present",
+      description:
+        "Collaborated closely with the CTO to optimize delivery processes, resulting in 35% faster feature delivery and a 25% reduction in time-to-market. Embedded behavioral analytics into design workflows, improving user adoption and engagement by over 20%, while conducting more than 150 customer interviews annually to uncover pain points and drive data-informed product improvements.",
+      highlights: [
+        "35% faster feature delivery",
+        "25% reduction in time-to-market",
+        "20% improvement in user adoption",
+      ],
+    },
+    {
+      title: "Associate Product Manager",
       company: "Rev9 Solutions",
       period: "May 2025 – May 2026",
       description:
@@ -82,18 +94,6 @@ export default function Index() {
         "40% platform capability increase in Q1",
         "25% boost in user engagement",
         "30% improvement in retention",
-      ],
-    },
-    {
-      title: "Associate Product Manager",
-      company: "Opulent Home Interiors",
-      period: "May 2025 – May 2026",
-      description:
-        "Collaborated closely with the CTO to optimize delivery processes, resulting in 35% faster feature delivery and a 25% reduction in time-to-market. Embedded behavioral analytics into design workflows, improving user adoption and engagement by over 20%, while conducting more than 150 customer interviews annually to uncover pain points and drive data-informed product improvements.",
-      highlights: [
-        "35% faster feature delivery",
-        "25% reduction in time-to-market",
-        "20% improvement in user adoption",
       ],
     },
     {
@@ -111,7 +111,7 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-foreground">
+    <div className="page-motion min-h-screen bg-white text-foreground">
 
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-32">
@@ -121,7 +121,7 @@ export default function Index() {
               Arbab Sikandar Khan
             </h1>
             <p className="text-lg text-muted-foreground mb-2 font-semibold">
-              Product Manager | AI & SaaS Strategist
+              Product Manager | AI, SaaS & Ecommerce
             </p>
             <p className="text-lg text-muted-foreground mb-8">
               Building AI-powered products that solve real problems.
