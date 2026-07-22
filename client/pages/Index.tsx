@@ -9,10 +9,10 @@ export default function Index() {
       description:
         "AI-powered color analysis tool that helps users instantly check if online products match their personal color palette while shopping.",
       impact: [
+        "Achieved 2K+ downloads and 40% MoM user engagement growth in 1 Month (Post Launch).",
         "Removed uncertainty in online shopping",
         "Integrated with e-commerce platforms",
         "Delivered real-time AI color matching",
-        "Achieved 2K+ downloads and 40% MoM user engagement growth in 1 Month (Post Launch).",
       ],
       image:
         "https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2F1a74e62e97b24ff2808f58db375cb641?format=webp&width=800&height=1200",
@@ -23,10 +23,10 @@ export default function Index() {
       description:
         "AI platform that automates the entire workflow from market research to ad creative generation (images & videos) and Meta Ads campaign deployment from a single dashboard.",
       impact: [
+        "Increased 30% team project onboarding capacity",
         "Reduced manual effort significantly",
         "Unified research + creative + ads process",
         "Built for a US-based digital agency",
-        "Increased 30% team project onboarding capacity",
       ],
       image:
         "https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2F43488a6f015f48a99945f2c43440394a?format=webp&width=800&height=1200",
@@ -49,10 +49,10 @@ export default function Index() {
       description:
         "Built an automated Proof of QA system for a leading US-based custom promotional products company, reducing manual designer effort and improving order verification accuracy.",
       impact: [
+        "Reduced the workforce from 40 Designers to 23 Designers in the 1st Quarter by automating the QA process",
         "Minimized manual design reviews",
         "Improved order accuracy",
         "Streamlined production workflow",
-        "Reduced the workforce from 40 Designers to 23 Designers in the 1st Quarter by automating the QA process",
       ],
       image:
         "https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2Ff4b33c8dc3694286b89035fb5e5b5efa?format=webp&width=800&height=1200",
