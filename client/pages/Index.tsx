@@ -12,6 +12,7 @@ export default function Index() {
         "Removed uncertainty in online shopping",
         "Integrated with e-commerce platforms",
         "Delivered real-time AI color matching",
+        "Achieved 2K+ downloads and 40% MoM user engagement growth in 1 Month (Post Launch).",
       ],
       image:
         "https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2F1a74e62e97b24ff2808f58db375cb641?format=webp&width=800&height=1200",
@@ -25,6 +26,7 @@ export default function Index() {
         "Reduced manual effort significantly",
         "Unified research + creative + ads process",
         "Built for a US-based digital agency",
+        "Increased 30% team project onboarding capacity",
       ],
       image:
         "https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2F43488a6f015f48a99945f2c43440394a?format=webp&width=800&height=1200",
@@ -42,6 +44,20 @@ export default function Index() {
       component: RevSlackMockup,
     },
     {
+      title: "Swag Print - Proof of QA",
+      category: "SaaS",
+      description:
+        "Built an automated Proof of QA system for a leading US-based custom promotional products company, reducing manual designer effort and improving order verification accuracy.",
+      impact: [
+        "Minimized manual design reviews",
+        "Improved order accuracy",
+        "Streamlined production workflow",
+        "Reduced the workforce from 40 Designers to 23 Designers in the 1st Quarter by automating the QA process",
+      ],
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2Ff4b33c8dc3694286b89035fb5e5b5efa?format=webp&width=800&height=1200",
+    },
+    {
       title: "Focus Tracker",
       category: "SaaS",
       description:
@@ -52,19 +68,6 @@ export default function Index() {
         "Built for internal operational use",
       ],
       component: FocusTrackerMockup,
-    },
-    {
-      title: "Swag Print - Proof of QA",
-      category: "SaaS",
-      description:
-        "Built an automated Proof of QA system for a leading US-based custom promotional products company, reducing manual designer effort and improving order verification accuracy.",
-      impact: [
-        "Minimized manual design reviews",
-        "Improved order accuracy",
-        "Streamlined production workflow",
-      ],
-      image:
-        "https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2Ff4b33c8dc3694286b89035fb5e5b5efa?format=webp&width=800&height=1200",
     },
   ];
 
@@ -114,9 +117,6 @@ export default function Index() {
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-medium">
-              🌍 Open to opportunities in KSA, Qatar & UAE
-            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Arbab Sikandar Khan
             </h1>
@@ -126,12 +126,12 @@ export default function Index() {
             <p className="text-lg text-muted-foreground mb-8">
               Building AI-powered products that solve real problems.
               <br />
-              4+ years helping teams ship better products.
+              3+ years helping teams ship better products.
             </p>
 
             <div className="space-y-4 mb-8">
               <p className="text-foreground leading-relaxed">
-                Results-driven Product Manager with over 4 years of experience
+                Results-driven Product Manager with over 3 years of experience
                 building and scaling AI-powered SaaS and e-commerce products
                 across the Middle East, UK, US, and Canada. I have a proven
                 track record of leading full product lifecycles from discovery
