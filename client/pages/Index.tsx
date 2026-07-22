@@ -158,17 +158,17 @@ export default function Index() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Arbab Sikandar Khan
             </h1>
-            <p className="text-lg text-muted-foreground mb-2 font-semibold">
+            <p className="text-base md:text-lg text-muted-foreground mb-2 font-semibold leading-6">
               Product Manager | AI, SaaS & Ecommerce
             </p>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-8 font-medium leading-7">
               Building AI-powered products that solve real problems.
               <br />
               3+ years helping teams ship better products.
             </p>
 
             <div className="space-y-4 mb-8">
-              <p className="text-foreground leading-relaxed">
+              <p className="text-base text-foreground leading-7">
                 Results-driven Product Manager with over 3 years of experience
                 building and scaling AI-powered SaaS and e-commerce products
                 across the Middle East, UK, US, and Canada. I have a proven
@@ -176,7 +176,7 @@ export default function Index() {
                 and strategy to execution and iteration while driving AI
                 adoption and delivering measurable business impact.
               </p>
-              <p className="text-foreground leading-relaxed">
+              <p className="text-base text-foreground leading-7">
                 I specialize in turning complex problems into simple, scalable
                 solutions by combining strong product strategy, cross-functional
                 leadership, and data-driven decision-making. With hands-on
@@ -189,7 +189,7 @@ export default function Index() {
             <div className="flex gap-4">
               <a
                 href="mailto:arbabsikandar411@gmail.com"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg text-sm font-semibold leading-5 hover:opacity-90 transition-opacity"
               >
                 <Mail size={18} />
                 Email Me
@@ -198,7 +198,7 @@ export default function Index() {
                 href="https://www.linkedin.com/in/arbab-sikandar-khan-6aa251215/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg font-medium hover:bg-secondary transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg text-sm font-semibold leading-5 hover:bg-secondary transition-colors"
               >
                 <Linkedin size={18} />
                 LinkedIn
@@ -223,14 +223,14 @@ export default function Index() {
       <section className="snapshot-section bg-secondary/30 px-6 py-16 text-foreground md:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 grid gap-6 border-b border-border pb-12 md:grid-cols-[0.8fr_2fr] md:items-start">
-            <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
+            <p className="text-xs font-semibold uppercase tracking-wide text-primary">
               01 / Product Manager Snapshot
             </p>
             <div className="max-w-3xl">
-              <h2 className="text-4xl font-semibold leading-[0.98] tracking-[-0.05em] md:text-6xl">
+              <h2 className="text-3xl font-bold leading-tight tracking-tight md:text-4xl">
                 The capabilities behind <em className="font-serif font-normal text-primary">better products.</em>
               </h2>
-              <p className="mt-6 max-w-2xl text-sm leading-7 text-muted-foreground md:text-base">
+              <p className="mt-6 max-w-2xl text-base leading-7 text-muted-foreground">
                 I bring a structured, human-centered approach to product work — balancing strategic intent with the real details that make an experience useful.
               </p>
             </div>
@@ -274,13 +274,13 @@ export default function Index() {
                 className="group rounded-lg border border-border bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-md"
               >
                 <div className="mb-10 flex items-start justify-between">
-                  <span className="text-[10px] font-bold tracking-wider text-primary">{number}</span>
+                  <span className="text-xs font-semibold tracking-wide text-primary">{number}</span>
                   <span className="flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
                     <Icon size={15} strokeWidth={2.5} />
                   </span>
                 </div>
-                <h3 className="mb-3 text-sm font-semibold text-foreground md:text-base">{title}</h3>
-                <p className="text-xs leading-5 text-muted-foreground">{description}</p>
+                <h3 className="mb-3 text-base font-semibold leading-6 text-foreground">{title}</h3>
+                <p className="text-sm leading-6 text-muted-foreground">{description}</p>
               </article>
             ))}
           </div>
@@ -342,15 +342,15 @@ export default function Index() {
                   <div className="inline-block mb-3 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide">
                     {project.category}
                   </div>
-                  <h3 className="text-3xl font-bold mb-4 text-foreground">
+                  <h3 className="text-xl font-bold leading-7 text-foreground md:text-2xl">
                     {project.title}
                   </h3>
-                  <p className="text-foreground text-base mb-6 leading-relaxed">
+                  <p className="text-base text-foreground mb-6 leading-7">
                     {project.description}
                   </p>
 
                   <div className="space-y-3">
-                    <p className="font-semibold text-foreground text-sm uppercase tracking-wide">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-foreground">
                       Key Impact
                     </p>
                     {project.impact.map((item, iidx) => (
@@ -358,7 +358,7 @@ export default function Index() {
                         <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
                           <span className="w-2 h-2 rounded-full bg-primary"></span>
                         </div>
-                        <span className="text-muted-foreground text-sm">
+                        <span className="text-sm leading-6 text-muted-foreground">
                           {item}
                         </span>
                       </div>
@@ -478,7 +478,7 @@ export default function Index() {
                     </h3>
                     <p className="text-primary font-semibold">{exp.company}</p>
                   </div>
-                  <span className="text-muted-foreground text-sm whitespace-nowrap">
+                  <span className="text-sm leading-6 text-muted-foreground whitespace-nowrap">
                     {exp.period}
                   </span>
                 </div>
@@ -518,7 +518,7 @@ export default function Index() {
             >
               <Mail className="w-8 h-8 text-primary mb-3" />
               <span className="font-semibold text-foreground mb-1">Email</span>
-              <span className="text-sm text-muted-foreground text-center">
+              <span className="text-sm leading-5 text-muted-foreground text-center">
                 arbabsikandar411@gmail.com
               </span>
             </a>
@@ -531,7 +531,7 @@ export default function Index() {
             >
               <Linkedin className="w-8 h-8 text-primary mb-3" />
               <span className="font-semibold text-foreground mb-1">LinkedIn</span>
-              <span className="text-sm text-muted-foreground text-center">
+              <span className="text-sm leading-5 text-muted-foreground text-center">
                 LinkedIn Profile
               </span>
             </a>
@@ -542,7 +542,7 @@ export default function Index() {
             >
               <Phone className="w-8 h-8 text-primary mb-3" />
               <span className="font-semibold text-foreground mb-1">Phone</span>
-              <span className="text-sm text-muted-foreground text-center">
+              <span className="text-sm leading-5 text-muted-foreground text-center">
                 +92 335 5616593
               </span>
             </a>
