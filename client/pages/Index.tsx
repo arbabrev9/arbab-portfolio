@@ -159,17 +159,17 @@ export default function Index() {
               Arbab Sikandar Khan
             </h1>
             <p className="text-base md:text-lg text-muted-foreground mb-2 font-semibold leading-6">
-              Product Manager | AI, SaaS & Ecommerce
+              Product Manager | Product Owner | AI, SaaS & Ecommerce
             </p>
             <p className="text-lg text-muted-foreground mb-8 font-medium leading-7">
               Building AI-powered products that solve real problems.
               <br />
-              3+ years helping teams ship better products.
+              4 Years helping teams ship better products.
             </p>
 
             <div className="space-y-4 mb-8">
               <p className="text-base text-foreground leading-7">
-                Results-driven Product Manager with over 3 years of experience
+                Results-driven Product Manager with over 4 Years of experience
                 building and scaling AI-powered SaaS and e-commerce products
                 across the Middle East, UK, US, and Canada. I have a proven
                 track record of leading full product lifecycles from discovery
@@ -375,7 +375,7 @@ export default function Index() {
       <section className="bg-white px-6 py-16 text-foreground md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
           <div className="flex flex-col justify-center">
-            <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.24em] text-muted-foreground">
+            <p className="mb-6 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
               02 / About Me
             </p>
             <h2 className="max-w-xl text-5xl font-semibold leading-[0.94] tracking-[-0.06em] md:text-7xl">
@@ -386,7 +386,7 @@ export default function Index() {
             </p>
 
             <div className="mt-8 border-t border-border pt-5">
-              <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                 Particularly interested in
               </p>
               <div className="flex flex-wrap gap-2">
@@ -413,7 +413,7 @@ export default function Index() {
           <div className="rounded-2xl border border-border bg-secondary/20 p-6 shadow-sm md:p-8">
             <div className="mb-5 flex items-start justify-between">
               <div>
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                   The Product Lifecycle
                 </p>
                 <p className="mt-2 text-xs text-muted-foreground">
@@ -437,7 +437,7 @@ export default function Index() {
                   <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[9px] font-medium ${index === 6 ? "bg-primary text-primary-foreground" : "border border-border bg-white text-muted-foreground"}`}>
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <div className={`flex-1 rounded-md px-4 py-2.5 text-xs font-medium ${index === 6 ? "bg-primary text-primary-foreground" : "bg-white text-foreground"}`}>
+                  <div className={`flex-1 rounded-md px-4 py-2.5 text-sm font-medium leading-6 ${index === 6 ? "bg-primary text-primary-foreground" : "bg-white text-foreground"}`}>
                     {step}
                   </div>
                 </div>
@@ -452,7 +452,7 @@ export default function Index() {
               ].map(([label, text]) => (
                 <div key={label}>
                   <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-muted-foreground">{label}</p>
-                  <p className="mt-2 text-[10px] leading-4 text-muted-foreground">{text}</p>
+                  <p className="mt-2 text-xs leading-5 text-muted-foreground">{text}</p>
                 </div>
               ))}
             </div>
