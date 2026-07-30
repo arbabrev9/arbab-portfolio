@@ -158,7 +158,7 @@ export default function Index() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Arbab Sikandar Khan
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground mb-2 font-semibold leading-6">
+            <p className="text-base md:text-lg text-primary mb-2 font-semibold leading-6">
               Product Manager | Technical Product Owner | AI, SaaS & Ecommerce
             </p>
             <p className="text-lg text-muted-foreground mb-8 font-medium leading-7">
