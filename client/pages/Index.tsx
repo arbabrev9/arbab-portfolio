@@ -373,8 +373,8 @@ export default function Index() {
 
       {/* About Me Section */}
       <section className="bg-white px-6 py-16 text-foreground md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
-          <div className="flex flex-col justify-center">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-stretch">
+          <div className="flex flex-col justify-center lg:col-start-2 lg:row-start-1">
             <p className="mb-6 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
               02 / About Me
             </p>
@@ -410,16 +410,16 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-[0.72fr_1.28fr]">
-            <div className="relative min-h-[360px] overflow-hidden rounded-2xl border border-border bg-secondary/20 shadow-sm md:min-h-0">
+          <div className="grid gap-5 md:grid-cols-1 lg:contents">
+            <div className="relative min-h-[420px] overflow-hidden rounded-2xl border border-border bg-secondary/20 shadow-xl md:min-h-0 lg:col-start-1 lg:row-span-2 lg:row-start-1">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2Fe93d4a10339e40b4b72269655b93a377?format=webp&width=800&height=1200"
                 alt="Arbab Sikandar Khan speaking at an event"
-                className="h-full w-full object-cover object-[center_32%]"
+                className="h-full w-full object-cover object-[center_28%]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/25 to-transparent" />
             </div>
-            <div className="rounded-2xl border border-border bg-secondary/20 p-6 shadow-sm md:p-8">
+            <div className="rounded-2xl border border-border bg-secondary/20 p-6 shadow-sm md:p-8 lg:col-start-2 lg:row-start-2">
             <div className="mb-5 flex items-start justify-between">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
