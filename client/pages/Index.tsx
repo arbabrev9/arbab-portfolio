@@ -410,8 +410,8 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="space-y-5">
-            <div className="relative h-52 overflow-hidden rounded-2xl border border-border bg-secondary/20 shadow-sm md:h-64">
+          <div className="grid gap-5 md:grid-cols-[0.72fr_1.28fr]">
+            <div className="relative min-h-[360px] overflow-hidden rounded-2xl border border-border bg-secondary/20 shadow-sm md:min-h-0">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2Fe93d4a10339e40b4b72269655b93a377?format=webp&width=800&height=1200"
                 alt="Arbab Sikandar Khan speaking at an event"
