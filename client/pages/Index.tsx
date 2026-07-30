@@ -159,7 +159,7 @@ export default function Index() {
               Arbab Sikandar Khan
             </h1>
             <p className="text-base md:text-lg text-muted-foreground mb-2 font-semibold leading-6">
-              Product Manager | Product Owner | AI, SaaS & Ecommerce
+              Product Manager | Technical Product Owner | AI, SaaS & Ecommerce
             </p>
             <p className="text-lg text-muted-foreground mb-8 font-medium leading-7">
               Building AI-powered products that solve real problems.
@@ -169,7 +169,7 @@ export default function Index() {
 
             <div className="space-y-4 mb-8">
               <p className="text-base text-foreground leading-7">
-                Results-driven Product Manager with over 4 Years of experience
+                Results-driven Product Manager & Technical Product Owner with over 4 Years of experience
                 building and scaling AI-powered SaaS and e-commerce products
                 across the Middle East, UK, US, and Canada. I have a proven
                 track record of leading full product lifecycles from discovery
