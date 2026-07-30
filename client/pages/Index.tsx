@@ -410,7 +410,16 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-border bg-secondary/20 p-6 shadow-sm md:p-8">
+          <div className="space-y-5">
+            <div className="relative h-52 overflow-hidden rounded-2xl border border-border bg-secondary/20 shadow-sm md:h-64">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2Fe93d4a10339e40b4b72269655b93a377?format=webp&width=800&height=1200"
+                alt="Arbab Sikandar Khan speaking at an event"
+                className="h-full w-full object-cover object-[center_32%]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/25 to-transparent" />
+            </div>
+            <div className="rounded-2xl border border-border bg-secondary/20 p-6 shadow-sm md:p-8">
             <div className="mb-5 flex items-start justify-between">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
@@ -455,6 +464,7 @@ export default function Index() {
                   <p className="mt-2 text-xs leading-5 text-muted-foreground">{text}</p>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </div>
