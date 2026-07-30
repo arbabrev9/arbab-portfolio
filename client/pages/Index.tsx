@@ -413,11 +413,10 @@ export default function Index() {
           <div className="grid gap-5 md:grid-cols-1 lg:contents">
             <div className="relative min-h-[420px] overflow-hidden rounded-2xl border border-border bg-secondary/20 shadow-xl md:min-h-0 lg:col-start-1 lg:row-span-2 lg:row-start-1">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2Fe93d4a10339e40b4b72269655b93a377?format=webp&width=800&height=1200"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2Fe93d4a10339e40b4b72269655b93a377?format=webp&width=1200&height=1800"
                 alt="Arbab Sikandar Khan speaking at an event"
-                className="h-full w-full object-cover object-[center_28%]"
+                className="h-full w-full object-cover object-[center_28%] brightness-105 contrast-105 saturate-90"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/25 to-transparent" />
             </div>
             <div className="rounded-2xl border border-border bg-secondary/20 p-6 shadow-sm md:p-8 lg:col-start-2 lg:row-start-2">
             <div className="mb-5 flex items-start justify-between">
