@@ -149,12 +149,17 @@ export default function Index() {
   ];
 
   return (
-    <div className="page-motion min-h-screen bg-white text-foreground">
+    <div className="portfolio-shell page-motion min-h-screen bg-white text-foreground">
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20 md:py-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="hero-section relative max-w-6xl mx-auto overflow-hidden px-6 py-20 md:py-32">
+        <div className="hero-grid pointer-events-none absolute inset-0" />
+        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
+            <p className="hero-kicker mb-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+              <span className="hero-signal" />
+              Product leadership / AI systems
+            </p>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Arbab Sikandar Khan
             </h1>
@@ -207,7 +212,7 @@ export default function Index() {
           </div>
 
           <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative w-64 h-80 md:w-72 md:h-96">
+            <div className="hero-image-shell relative w-64 h-80 md:w-72 md:h-96">
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-blue-600 rounded-2xl blur-2xl opacity-20"></div>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2F0f5cc08f52cd4b448754c3c06348f2b8?format=webp&width=800&height=1200"
@@ -220,8 +225,9 @@ export default function Index() {
       </section>
 
       {/* Product Manager Snapshot */}
-      <section className="snapshot-section bg-secondary/30 px-6 py-16 text-foreground md:py-24">
-        <div className="mx-auto max-w-7xl">
+      <section className="snapshot-section relative overflow-hidden bg-secondary/30 px-6 py-16 text-foreground md:py-24">
+        <div className="section-grid pointer-events-none absolute inset-0" />
+        <div className="relative mx-auto max-w-7xl">
           <div className="mb-12 grid gap-6 border-b border-border pb-12 md:grid-cols-[0.8fr_2fr] md:items-start">
             <p className="text-xs font-semibold uppercase tracking-wide text-primary">
               01 / Product Manager Snapshot
@@ -271,7 +277,7 @@ export default function Index() {
             ].map(({ number, title, description, Icon }) => (
               <article
                 key={number}
-                className="group rounded-lg border border-border bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-md"
+                className="snapshot-card group rounded-lg border border-border bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-md"
               >
                 <div className="mb-10 flex items-start justify-between">
                   <span className="text-xs font-semibold tracking-wide text-primary">{number}</span>
@@ -288,8 +294,10 @@ export default function Index() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-20 bg-secondary/20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="projects-section relative overflow-hidden bg-secondary/20 py-20">
+        <div className="section-grid pointer-events-none absolute inset-0" />
+        <div className="relative max-w-7xl mx-auto px-6">
+          <p className="section-kicker mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">02 / Selected work</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-16">
             Featured Projects
           </h2>
@@ -312,7 +320,7 @@ export default function Index() {
                 {/* Image Section */}
                 {project.image ? (
                   <div className="w-full md:w-1/2 flex-shrink-0">
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <div className="project-visual relative rounded-2xl overflow-hidden shadow-2xl">
                       <img
                         src={project.image}
                         alt={project.title}
@@ -322,7 +330,7 @@ export default function Index() {
                   </div>
                 ) : project.component ? (
                   <div className="w-full md:w-1/2 flex-shrink-0">
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white p-6">
+                    <div className="project-visual relative rounded-2xl overflow-hidden shadow-2xl bg-white p-6">
                       <project.component />
                     </div>
                   </div>
@@ -338,8 +346,8 @@ export default function Index() {
                 )}
 
                 {/* Content Section */}
-                <div className="w-full md:w-1/2">
-                  <div className="inline-block mb-3 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide">
+                <div className="project-copy w-full md:w-1/2">
+                  <div className="project-category inline-block mb-3 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide">
                     {project.category}
                   </div>
                   <h3 className="text-xl font-bold leading-7 text-foreground md:text-2xl">
@@ -372,11 +380,12 @@ export default function Index() {
       </section>
 
       {/* About Me Section */}
-      <section className="bg-white px-6 py-16 text-foreground md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-stretch">
+      <section className="about-section relative overflow-hidden bg-white px-6 py-16 text-foreground md:py-24">
+        <div className="section-grid pointer-events-none absolute inset-0" />
+        <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-stretch">
           <div className="flex flex-col justify-center lg:col-start-2 lg:row-start-1">
-            <p className="mb-6 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              02 / About Me
+            <p className="section-kicker mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+              03 / About Me
             </p>
             <h2 className="max-w-xl text-5xl font-semibold leading-[0.94] tracking-[-0.06em] md:text-7xl">
               I don’t just manage <em className="font-serif font-normal text-primary">feature requests.</em>
@@ -401,7 +410,7 @@ export default function Index() {
                 ].map((interest) => (
                   <span
                     key={interest}
-                    className="rounded-full border border-border bg-secondary/30 px-3 py-1.5 text-[11px] text-muted-foreground"
+                    className="interest-chip rounded-full border border-border bg-secondary/30 px-3 py-1.5 text-[11px] text-muted-foreground"
                   >
                     {interest}
                   </span>
@@ -411,14 +420,14 @@ export default function Index() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-1 lg:contents">
-            <div className="relative min-h-[420px] overflow-hidden rounded-2xl border border-border bg-secondary/20 shadow-xl md:min-h-0 lg:col-start-1 lg:row-span-2 lg:row-start-1">
+            <div className="about-portrait relative min-h-[420px] overflow-hidden rounded-2xl border border-border bg-secondary/20 shadow-xl md:min-h-0 lg:col-start-1 lg:row-span-2 lg:row-start-1">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2Fe93d4a10339e40b4b72269655b93a377?format=webp&width=1200&height=1800"
                 alt="Arbab Sikandar Khan speaking at an event"
                 className="h-full w-full object-cover object-[center_28%] brightness-105 contrast-105 saturate-90"
               />
             </div>
-            <div className="rounded-2xl border border-border bg-secondary/20 p-6 shadow-sm md:p-8 lg:col-start-2 lg:row-start-2">
+            <div className="lifecycle-card rounded-2xl border border-border bg-secondary/20 p-6 shadow-sm md:p-8 lg:col-start-2 lg:row-start-2">
             <div className="mb-5 flex items-start justify-between">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
@@ -470,15 +479,17 @@ export default function Index() {
       </section>
 
       {/* Experience Section */}
-      <section className="bg-secondary/30 py-20">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="experience-section relative overflow-hidden bg-secondary/30 py-20">
+        <div className="section-grid pointer-events-none absolute inset-0" />
+        <div className="relative max-w-6xl mx-auto px-6">
+          <p className="section-kicker mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">04 / Experience</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Experience</h2>
 
-          <div className="space-y-8">
+          <div className="experience-list space-y-8">
             {experiences.map((exp, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-8 border border-border hover:border-primary/30 transition-colors"
+                className="experience-card bg-white rounded-xl p-8 border border-border hover:border-primary/30 transition-colors"
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
                   <div>
@@ -520,7 +531,7 @@ export default function Index() {
             <div>
               <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
                 <span className="skills-live-dot" />
-                03 / Technical Skills & Tools
+                05 / Technical Skills & Tools
               </p>
               <h2 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">
                 The toolkit behind <em className="font-serif font-normal text-primary">effective products.</em>
@@ -647,8 +658,10 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="connect" className="py-20 bg-secondary/30">
-        <div className="max-w-6xl mx-auto px-6">
+      <section id="connect" className="contact-section relative overflow-hidden py-20 bg-secondary/30">
+        <div className="section-grid pointer-events-none absolute inset-0" />
+        <div className="relative max-w-6xl mx-auto px-6">
+          <p className="section-kicker mb-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-primary">06 / Connect</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             Let's Connect
           </h2>
@@ -656,7 +669,7 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <a
               href="mailto:arbabsikandar411@gmail.com"
-              className="flex flex-col items-center p-6 bg-white rounded-xl border border-border hover:border-primary hover:shadow-md transition-all"
+              className="contact-card flex flex-col items-center p-6 bg-white rounded-xl border border-border hover:border-primary hover:shadow-md transition-all"
             >
               <Mail className="w-8 h-8 text-primary mb-3" />
               <span className="font-semibold text-foreground mb-1">Email</span>
@@ -669,7 +682,7 @@ export default function Index() {
               href="https://www.linkedin.com/in/arbab-sikandar-khan-6aa251215/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-6 bg-white rounded-xl border border-border hover:border-primary hover:shadow-md transition-all"
+              className="contact-card flex flex-col items-center p-6 bg-white rounded-xl border border-border hover:border-primary hover:shadow-md transition-all"
             >
               <Linkedin className="w-8 h-8 text-primary mb-3" />
               <span className="font-semibold text-foreground mb-1">LinkedIn</span>
@@ -680,7 +693,7 @@ export default function Index() {
 
             <a
               href="tel:+923355616593"
-              className="flex flex-col items-center p-6 bg-white rounded-xl border border-border hover:border-primary hover:shadow-md transition-all"
+              className="contact-card flex flex-col items-center p-6 bg-white rounded-xl border border-border hover:border-primary hover:shadow-md transition-all"
             >
               <Phone className="w-8 h-8 text-primary mb-3" />
               <span className="font-semibold text-foreground mb-1">Phone</span>
@@ -693,7 +706,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 bg-white">
+      <footer className="site-footer border-t border-border py-8 bg-white">
         <div className="max-w-6xl mx-auto px-6 text-center text-muted-foreground">
           <p>© 2025 Arbab Sikandar Khan. All rights reserved.</p>
         </div>
