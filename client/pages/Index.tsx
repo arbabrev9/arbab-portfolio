@@ -513,72 +513,135 @@ export default function Index() {
       </section>
 
       {/* Technical Skills & Tools */}
-      <section className="bg-white px-6 py-20 md:py-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 grid gap-6 border-b border-border pb-10 md:grid-cols-[0.8fr_2fr] md:items-start">
-            <p className="text-xs font-semibold uppercase tracking-wide text-primary">
-              03 / Technical Skills & Tools
-            </p>
-            <div className="max-w-3xl">
-              <h2 className="text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+      <section className="skills-section relative overflow-hidden px-6 py-20 md:py-24">
+        <div className="skills-grid pointer-events-none absolute inset-0" />
+        <div className="relative mx-auto max-w-6xl">
+          <div className="mb-10 flex flex-col gap-6 border-b border-border/80 pb-8 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                <span className="skills-live-dot" />
+                03 / Technical Skills & Tools
+              </p>
+              <h2 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">
                 The toolkit behind <em className="font-serif font-normal text-primary">effective products.</em>
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
                 A practical mix of product strategy, delivery, analytics, design, and technical fluency used to move ideas from discovery to measurable outcomes.
               </p>
             </div>
+            <div className="skills-command-bar flex shrink-0 items-center gap-3 rounded-full border border-primary/20 bg-white/75 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground shadow-sm backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_12px_hsl(var(--primary)/0.8)]" />
+              <span>Strategy</span>
+              <span className="text-primary">→</span>
+              <span>Execution</span>
+              <span className="text-primary">→</span>
+              <span>Impact</span>
+            </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
-            {[
-              {
-                number: "01",
-                title: "Product Strategy & Discovery",
-                skills: "Product Vision, Product Strategy, Roadmapping, Customer Discovery, User Research, Competitive Analysis, MVP Definition, Product Positioning, Go-to-Market Strategy",
-              },
-              {
-                number: "02",
-                title: "Product Delivery & Execution",
-                skills: "Agile/Scrum, Backlog Management, Prioritization, RICE, MoSCoW, PRDs, User Stories, Acceptance Criteria, Release Planning, Sprint Planning, Dependency Management, Stakeholder Management",
-              },
-              {
-                number: "03",
-                title: "Analytics & Experimentation",
-                skills: "Product Analytics, KPI Definition, OKRs, Funnel Analysis, A/B Testing, Conversion Rate Optimization, Google Analytics, Microsoft Clarity, Hotjar, Google Search Console, Meta Ads, Google Ads",
-              },
-              {
-                number: "04",
-                title: "Design & Prototyping",
-                skills: "Lovable, Builder.io, Banani.io, FigJam, Balsamiq, Claude Code",
-              },
-              {
-                number: "05",
-                title: "Tools",
-                skills: "Jira, Confluence, Notion, FigJam, Miro, Balsamiq, Asana",
-              },
-              {
-                number: "06",
-                title: "Technical & Product Domains",
-                skills: "AI/ML Products, SaaS, B2B/B2C Platforms, E-commerce, REST APIs, Laravel, PHP, Git, GitHub, Vercel",
-              },
-            ].map((skillGroup) => (
-              <article
-                key={skillGroup.title}
-                className="group rounded-2xl border border-border bg-secondary/20 p-6 transition-all hover:-translate-y-1 hover:border-primary/30 hover:bg-white hover:shadow-lg md:p-7"
-              >
-                <div className="mb-5 flex items-center gap-3">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
-                    {skillGroup.number}
-                  </span>
-                  <h3 className="text-lg font-bold text-foreground">
-                    {skillGroup.title}
-                  </h3>
+          <div className="grid gap-5 lg:grid-cols-[0.72fr_1.28fr]">
+            <div className="skills-console relative overflow-hidden rounded-3xl border border-primary/20 p-6 shadow-xl md:p-8">
+              <div className="skills-console-scan pointer-events-none absolute inset-0" />
+              <div className="relative z-10 flex h-full flex-col">
+                <div className="flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
+                  <span>Product operating system</span>
+                  <span className="rounded-full border border-primary/20 px-2 py-1 text-muted-foreground">Live map</span>
                 </div>
-                <p className="text-sm leading-7 text-muted-foreground">
-                  {skillGroup.skills}
-                </p>
-              </article>
-            ))}
+
+                <div className="skills-orbit-stage my-8 flex min-h-[260px] flex-1 items-center justify-center">
+                  <div className="skills-orbit skills-orbit-one" />
+                  <div className="skills-orbit skills-orbit-two" />
+                  <div className="skills-orbit skills-orbit-three" />
+                  <div className="skills-core relative z-10 flex h-28 w-28 flex-col items-center justify-center rounded-full border border-primary/40 bg-white/90 text-center shadow-[0_0_45px_hsl(var(--primary)/0.2)]">
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Build</span>
+                    <strong className="text-2xl font-extrabold tracking-tight text-foreground">PM</strong>
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">Better</span>
+                  </div>
+                  <span className="skills-orbit-chip skills-orbit-chip-one">AI / ML</span>
+                  <span className="skills-orbit-chip skills-orbit-chip-two">SaaS</span>
+                  <span className="skills-orbit-chip skills-orbit-chip-three">E-commerce</span>
+                  <span className="skills-orbit-chip skills-orbit-chip-four">REST APIs</span>
+                </div>
+
+                <div className="grid grid-cols-3 gap-2 border-t border-border/70 pt-5 text-center">
+                  <div>
+                    <p className="text-lg font-bold text-foreground">06</p>
+                    <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Modules</p>
+                  </div>
+                  <div>
+                    <p className="text-lg font-bold text-foreground">360°</p>
+                    <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Product view</p>
+                  </div>
+                  <div>
+                    <p className="text-lg font-bold text-foreground">∞</p>
+                    <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Iterations</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  number: "01",
+                  title: "Product Strategy & Discovery",
+                  skills: "Product Vision, Product Strategy, Roadmapping, Customer Discovery, User Research, Competitive Analysis, MVP Definition, Product Positioning, Go-to-Market Strategy",
+                },
+                {
+                  number: "02",
+                  title: "Product Delivery & Execution",
+                  skills: "Agile/Scrum, Backlog Management, Prioritization, RICE, MoSCoW, PRDs, User Stories, Acceptance Criteria, Release Planning, Sprint Planning, Dependency Management, Stakeholder Management",
+                },
+                {
+                  number: "03",
+                  title: "Analytics & Experimentation",
+                  skills: "Product Analytics, KPI Definition, OKRs, Funnel Analysis, A/B Testing, Conversion Rate Optimization, Google Analytics, Microsoft Clarity, Hotjar, Google Search Console, Meta Ads, Google Ads",
+                },
+                {
+                  number: "04",
+                  title: "Design & Prototyping",
+                  skills: "Lovable, Builder.io, Banani.io, FigJam, Balsamiq, Claude Code",
+                },
+                {
+                  number: "05",
+                  title: "Tools",
+                  skills: "Jira, Confluence, Notion, FigJam, Miro, Balsamiq, Asana",
+                },
+                {
+                  number: "06",
+                  title: "Technical & Product Domains",
+                  skills: "AI/ML Products, SaaS, B2B/B2C Platforms, E-commerce, REST APIs, Laravel, PHP, Git, GitHub, Vercel",
+                },
+              ].map((skillGroup, groupIndex) => (
+                <article
+                  key={skillGroup.title}
+                  className="skills-module group rounded-2xl border border-border bg-white/80 p-5 shadow-sm backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg md:p-6"
+                >
+                  <div className="mb-4 flex items-start justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-[10px] font-bold text-primary-foreground shadow-[0_0_18px_hsl(var(--primary)/0.25)]">
+                        {skillGroup.number}
+                      </span>
+                      <h3 className="text-base font-bold leading-5 text-foreground">
+                        {skillGroup.title}
+                      </h3>
+                    </div>
+                    <span className="text-[10px] font-bold text-primary/60">/ /</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {skillGroup.skills.split(", ").map((skill, skillIndex) => (
+                      <span
+                        key={skill}
+                        className="skills-chip rounded-full border border-primary/15 bg-secondary/30 px-2.5 py-1 text-[11px] font-medium leading-4 text-muted-foreground transition-colors group-hover:border-primary/25 group-hover:text-foreground"
+                        style={{ animationDelay: `${(skillIndex % 6) * 0.18 + groupIndex * 0.08}s` }}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -192,10 +192,185 @@
     transform: translateY(-2px);
   }
 
+  @keyframes skills-orbit {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes skills-orbit-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes skills-chip-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  @keyframes skills-scan {
+    from {
+      transform: translateY(-18%);
+    }
+    to {
+      transform: translateY(18%);
+    }
+  }
+
+  @keyframes skills-pulse {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(0.9);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  .skills-section {
+    background:
+      radial-gradient(circle at 8% 20%, hsl(var(--primary) / 0.07), transparent 28rem),
+      linear-gradient(180deg, hsl(var(--secondary) / 0.2), hsl(var(--background)) 38%, hsl(var(--secondary) / 0.15));
+  }
+
+  .skills-grid {
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.07) 1px, transparent 1px);
+    background-size: 38px 38px;
+    mask-image: linear-gradient(to bottom, black, transparent 78%);
+    opacity: 0.55;
+  }
+
+  .skills-live-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 9999px;
+    background: hsl(var(--primary));
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.12), 0 0 16px hsl(var(--primary) / 0.7);
+    animation: skills-pulse 2.4s ease-in-out infinite;
+  }
+
+  .skills-console {
+    background:
+      radial-gradient(circle at 50% 42%, hsl(var(--primary) / 0.15), transparent 44%),
+      linear-gradient(145deg, hsl(var(--secondary) / 0.56), hsl(var(--background)) 72%);
+  }
+
+  .skills-console-scan {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 10px,
+      hsl(var(--primary) / 0.035) 11px,
+      transparent 12px
+    );
+    animation: skills-scan 8s ease-in-out infinite alternate;
+  }
+
+  .skills-orbit-stage {
+    position: relative;
+  }
+
+  .skills-orbit {
+    position: absolute;
+    border: 1px solid hsl(var(--primary) / 0.2);
+    border-radius: 9999px;
+    box-shadow: 0 0 24px hsl(var(--primary) / 0.08);
+  }
+
+  .skills-orbit-one {
+    width: 238px;
+    height: 238px;
+    animation: skills-orbit 18s linear infinite;
+  }
+
+  .skills-orbit-two {
+    width: 188px;
+    height: 188px;
+    border-style: dashed;
+    animation: skills-orbit-reverse 14s linear infinite;
+  }
+
+  .skills-orbit-three {
+    width: 138px;
+    height: 138px;
+    border-color: hsl(var(--primary) / 0.1);
+    animation: skills-orbit 10s linear infinite;
+  }
+
+  .skills-orbit-chip {
+    position: absolute;
+    z-index: 20;
+    border: 1px solid hsl(var(--primary) / 0.22);
+    border-radius: 9999px;
+    background: hsl(var(--background) / 0.9);
+    padding: 0.35rem 0.65rem;
+    color: hsl(var(--primary));
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    box-shadow: 0 8px 20px hsl(var(--foreground) / 0.08);
+    backdrop-filter: blur(8px);
+  }
+
+  .skills-orbit-chip-one {
+    top: 8%;
+    left: 9%;
+    animation: skills-chip-float 4s ease-in-out infinite;
+  }
+
+  .skills-orbit-chip-two {
+    top: 14%;
+    right: 8%;
+    animation: skills-chip-float 4.8s ease-in-out 0.5s infinite;
+  }
+
+  .skills-orbit-chip-three {
+    bottom: 9%;
+    right: 5%;
+    animation: skills-chip-float 4.4s ease-in-out 1s infinite;
+  }
+
+  .skills-orbit-chip-four {
+    bottom: 12%;
+    left: 5%;
+    animation: skills-chip-float 5s ease-in-out 1.4s infinite;
+  }
+
+  .skills-chip {
+    animation: skills-chip-float 4.2s ease-in-out infinite;
+  }
+
+  .skills-module:nth-child(even) .skills-chip {
+    animation-name: skills-chip-float;
+    animation-duration: 4.8s;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .page-motion > section,
     .page-motion > footer,
-    .page-motion > section:first-of-type img {
+    .page-motion > section:first-of-type img,
+    .skills-live-dot,
+    .skills-console-scan,
+    .skills-orbit,
+    .skills-orbit-chip,
+    .skills-chip {
       animation: none;
     }
 
