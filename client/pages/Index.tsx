@@ -112,7 +112,7 @@ export default function Index() {
   const experiences = [
     {
       title: "Product Manager",
-      company: "Opulent Home Interiors",
+      company: "BK Online",
       period: "June 2023 - Present",
       description:
         "Collaborated closely with the CTO to optimize delivery processes, resulting in 35% faster feature delivery and a 25% reduction in time-to-market. Embedded behavioral analytics into design workflows, improving user adoption and engagement by over 20%, while conducting more than 150 customer interviews annually to uncover pain points and drive data-informed product improvements.",
