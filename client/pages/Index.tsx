@@ -112,7 +112,7 @@ export default function Index() {
   const experiences = [
     {
       title: "Product Manager",
-      company: "BK Online",
+      company: "BK Online UK",
       period: "June 2023 - Present",
       description:
         "Collaborated closely with the CTO to optimize delivery processes, resulting in 35% faster feature delivery and a 25% reduction in time-to-market. Embedded behavioral analytics into design workflows, improving user adoption and engagement by over 20%, while conducting more than 150 customer interviews annually to uncover pain points and drive data-informed product improvements.",
@@ -123,7 +123,7 @@ export default function Index() {
       ],
     },
     {
-      title: "Associate Product Manager",
+      title: "Technical Product Manager",
       company: "Rev9 Solutions",
       period: "May 2025 – May 2026",
       description:
@@ -512,6 +512,76 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Technical Skills & Tools */}
+      <section className="bg-white px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-12 grid gap-6 border-b border-border pb-10 md:grid-cols-[0.8fr_2fr] md:items-start">
+            <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+              03 / Technical Skills & Tools
+            </p>
+            <div className="max-w-3xl">
+              <h2 className="text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+                The toolkit behind <em className="font-serif font-normal text-primary">effective products.</em>
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
+                A practical mix of product strategy, delivery, analytics, design, and technical fluency used to move ideas from discovery to measurable outcomes.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {[
+              {
+                number: "01",
+                title: "Product Strategy & Discovery",
+                skills: "Product Vision, Product Strategy, Roadmapping, Customer Discovery, User Research, Competitive Analysis, MVP Definition, Product Positioning, Go-to-Market Strategy",
+              },
+              {
+                number: "02",
+                title: "Product Delivery & Execution",
+                skills: "Agile/Scrum, Backlog Management, Prioritization, RICE, MoSCoW, PRDs, User Stories, Acceptance Criteria, Release Planning, Sprint Planning, Dependency Management, Stakeholder Management",
+              },
+              {
+                number: "03",
+                title: "Analytics & Experimentation",
+                skills: "Product Analytics, KPI Definition, OKRs, Funnel Analysis, A/B Testing, Conversion Rate Optimization, Google Analytics, Microsoft Clarity, Hotjar, Google Search Console, Meta Ads, Google Ads",
+              },
+              {
+                number: "04",
+                title: "Design & Prototyping",
+                skills: "Lovable, Builder.io, Banani.io, FigJam, Balsamiq, Claude Code",
+              },
+              {
+                number: "05",
+                title: "Tools",
+                skills: "Jira, Confluence, Notion, FigJam, Miro, Balsamiq, Asana",
+              },
+              {
+                number: "06",
+                title: "Technical & Product Domains",
+                skills: "AI/ML Products, SaaS, B2B/B2C Platforms, E-commerce, REST APIs, Laravel, PHP, Git, GitHub, Vercel",
+              },
+            ].map((skillGroup) => (
+              <article
+                key={skillGroup.title}
+                className="group rounded-2xl border border-border bg-secondary/20 p-6 transition-all hover:-translate-y-1 hover:border-primary/30 hover:bg-white hover:shadow-lg md:p-7"
+              >
+                <div className="mb-5 flex items-center gap-3">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                    {skillGroup.number}
+                  </span>
+                  <h3 className="text-lg font-bold text-foreground">
+                    {skillGroup.title}
+                  </h3>
+                </div>
+                <p className="text-sm leading-7 text-muted-foreground">
+                  {skillGroup.skills}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Contact Section */}
       <section id="connect" className="py-20 bg-secondary/30">
