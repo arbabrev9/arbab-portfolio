@@ -4,11 +4,6 @@ import {
   Phone,
   ArrowRight,
   ExternalLink,
-  Target,
-  Search,
-  Rocket,
-  Layers3,
-  WandSparkles,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { FocusTrackerMockup, RevSlackMockup } from "@/components/ProjectMockups";
@@ -214,75 +209,6 @@ export default function Index() {
                 className="relative w-full h-full object-cover rounded-2xl shadow-2xl"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Manager Snapshot */}
-      <section className="snapshot-section relative overflow-hidden bg-secondary/30 px-6 py-16 text-foreground md:py-24">
-        <div className="section-grid pointer-events-none absolute inset-0" />
-        <div className="relative mx-auto max-w-7xl">
-          <div className="mb-12 grid gap-6 border-b border-border pb-12 md:grid-cols-[0.8fr_2fr] md:items-start">
-            <p className="text-xs font-semibold uppercase tracking-wide text-primary">
-              01 / Product Manager Snapshot
-            </p>
-            <div className="max-w-3xl">
-              <h2 className="text-3xl font-bold leading-tight tracking-tight md:text-4xl">
-                The capabilities behind <em className="font-serif font-normal text-primary">better products.</em>
-              </h2>
-              <p className="mt-6 max-w-2xl text-base leading-7 text-muted-foreground">
-                I bring a structured, human-centered approach to product work — balancing strategic intent with the real details that make an experience useful.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-            {[
-              {
-                number: "01",
-                title: "Product Strategy",
-                description: "Turning business objectives and user problems into clear product direction and actionable strategies.",
-                Icon: Target,
-              },
-              {
-                number: "02",
-                title: "Product Discovery",
-                description: "Understanding users, stakeholders, markets, and problems before deciding what to build.",
-                Icon: Search,
-              },
-              {
-                number: "03",
-                title: "Product Execution",
-                description: "Translating ideas into clear requirements and working closely with design, engineering, and QA teams to deliver products.",
-                Icon: Rocket,
-              },
-              {
-                number: "04",
-                title: "Technical Product Management",
-                description: "Bridging business needs with technical possibilities across web, mobile, SaaS, APIs, databases, and AI systems.",
-                Icon: Layers3,
-              },
-              {
-                number: "05",
-                title: "AI Product Thinking",
-                description: "Identifying meaningful opportunities to use AI, designing intelligent workflows, and balancing automation with user control.",
-                Icon: WandSparkles,
-              },
-            ].map(({ number, title, description, Icon }) => (
-              <article
-                key={number}
-                className="snapshot-card group rounded-lg border border-border bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-md"
-              >
-                <div className="mb-10 flex items-start justify-between">
-                  <span className="text-xs font-semibold tracking-wide text-primary">{number}</span>
-                  <span className="flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
-                    <Icon size={15} strokeWidth={2.5} />
-                  </span>
-                </div>
-                <h3 className="mb-3 text-base font-semibold leading-6 text-foreground">{title}</h3>
-                <p className="text-sm leading-6 text-muted-foreground">{description}</p>
-              </article>
-            ))}
           </div>
         </div>
       </section>
