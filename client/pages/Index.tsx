@@ -164,19 +164,13 @@ export default function Index() {
               Arbab Sikandar Khan
             </h1>
             <p className="text-base md:text-lg text-primary mb-2 font-semibold leading-6">
-              Product Manager | Technical Product Owner | AI, SaaS & Ecommerce Products
+              Product Manager | Technical Product Owner | AI, SaaS & Digital Products
             </p>
-            <p className="text-lg text-muted-foreground mb-8 font-medium leading-7">
-              Building AI-powered products that solve real problems.
-              <br />
-              4 Years helping teams ship better products.
-            </p>
-
             <div className="space-y-4 mb-8">
               <p className="text-base text-foreground leading-7">
-                Results-driven Product Manager & Technical Product Owner with over 4 Years of experience
+                Results-driven Product Manager & Technical Product Owner with over <strong className="font-bold text-foreground">4 Years</strong> of experience
                 building and scaling AI-powered SaaS and e-commerce products
-                across the Middle East, UK, US, and Canada. I have a proven
+                across the UK, US, Canada, and Middle East. I have a proven
                 track record of leading full product lifecycles from discovery
                 and strategy to execution and iteration while driving AI
                 adoption and delivering measurable business impact.
