@@ -200,7 +200,7 @@ export default function Index() {
               Arbab Sikandar Khan
             </h1>
             <p className="text-base md:text-lg text-primary mb-2 font-semibold leading-6">
-              Product Manager | Technical Product Owner | AI, SaaS & Digital Products
+              Technical Product Manager | AI Product Manager | Product Owner | Product Marketing Manager | AI, SaaS & Digital Products
             </p>
             <div className="space-y-4 mb-8">
               <p className="text-base text-foreground leading-7">
