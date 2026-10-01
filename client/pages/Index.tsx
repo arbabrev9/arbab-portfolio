@@ -204,7 +204,7 @@ export default function Index() {
             </p>
             <div className="space-y-4 mb-8">
               <p className="text-base text-foreground leading-7">
-                Results-driven Product Manager & Technical Product Owner with over 4 Years of experience
+                Results-driven Technical Product Manager & Product Owner with over 4 Years of experience
                 building and scaling AI-powered SaaS and e-commerce products
                 across the UK, US, Canada, and Middle East. I have a proven
                 track record of leading full product lifecycles from discovery
