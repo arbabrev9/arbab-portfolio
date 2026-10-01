@@ -1,5 +1,4 @@
 import {
-  Award,
   Mail,
   Linkedin,
   Phone,
@@ -352,8 +351,12 @@ export default function Index() {
           <article className="certification-card rounded-3xl border border-primary/20 bg-gradient-to-br from-white via-white to-blue-50/70 p-6 shadow-sm md:p-10">
             <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
               <div className="flex items-start gap-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                  <Award aria-hidden="true" className="h-7 w-7" />
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-border bg-white p-2">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fa39d6d852ed54f8dacf14dd22c20bb40%2F625646a70d8843ffa83d93b8343e2fca?format=webp&width=800&height=1200"
+                    alt="Google"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <div>
                   <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
@@ -368,9 +371,6 @@ export default function Index() {
                 </div>
               </div>
               <div className="flex shrink-0 flex-col gap-2 md:items-end">
-                <span className="w-fit rounded-full border border-emerald-600/20 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
-                  Completed and verified certificate.
-                </span>
                 <a
                   href="https://coursera.org/verify/professional-cert/KNU3RQO7HA6X"
                   target="_blank"
