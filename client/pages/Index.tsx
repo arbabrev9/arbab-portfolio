@@ -1,4 +1,5 @@
 import {
+  Award,
   Mail,
   Linkedin,
   Phone,
@@ -6,6 +7,12 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { FocusTrackerMockup, RevSlackMockup } from "@/components/ProjectMockups";
 
 export default function Index() {
@@ -101,6 +108,41 @@ export default function Index() {
         "Built for internal operational use",
       ],
       component: FocusTrackerMockup,
+    },
+  ];
+
+  const certificates = [
+    {
+      title: "AI Fundamentals",
+      verificationUrl: "https://coursera.org/verify/XHYGKZK0XJUQ",
+    },
+    {
+      title: "AI for Brainstorming and Planning",
+      verificationUrl: "https://coursera.org/verify/FNIT9S1LXP58",
+    },
+    {
+      title: "AI for Research and Insights",
+      verificationUrl: "https://coursera.org/verify/TRE9T94UJ4AX",
+    },
+    {
+      title: "AI for Writing and Communicating",
+      verificationUrl: "https://coursera.org/verify/QSGRBSF3OLJS",
+    },
+    {
+      title: "AI for Content Creation",
+      verificationUrl: "https://coursera.org/verify/EUDJ2SJT5TH9",
+    },
+    {
+      title: "AI for Data Analysis",
+      verificationUrl: "https://coursera.org/verify/7W5DUNA0UPN7",
+    },
+    {
+      title: "AI for App Building",
+      verificationUrl: "https://coursera.org/verify/D4CBN5GJAMJL",
+    },
+    {
+      title: "AI for App Deployment",
+      verificationUrl: "https://coursera.org/verify/59X0RFTVKA07",
     },
   ];
 
@@ -299,13 +341,89 @@ export default function Index() {
         </div>
       </section>
 
+      <section id="certifications" className="certifications-section relative overflow-hidden bg-white px-6 py-20 md:py-24">
+        <div className="section-grid pointer-events-none absolute inset-0" />
+        <div className="relative mx-auto max-w-6xl">
+          <p className="section-kicker mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            03 / Certifications
+          </p>
+          <h2 className="mb-10 text-3xl font-bold md:text-4xl">Certifications</h2>
+
+          <article className="certification-card rounded-3xl border border-primary/20 bg-gradient-to-br from-white via-white to-blue-50/70 p-6 shadow-sm md:p-10">
+            <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <Award aria-hidden="true" className="h-7 w-7" />
+                </div>
+                <div>
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                    Google · Coursera
+                  </p>
+                  <h3 className="text-2xl font-bold leading-tight text-foreground md:text-3xl">
+                    Google AI Professional Certificate
+                  </h3>
+                  <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground md:text-base">
+                    Completed an eight-course program applying AI to brainstorming, research, communication, content creation, data analysis, and coding.
+                  </p>
+                </div>
+              </div>
+              <div className="flex shrink-0 flex-col gap-2 md:items-end">
+                <span className="w-fit rounded-full border border-emerald-600/20 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
+                  Completed
+                </span>
+                <span className="text-sm text-muted-foreground">September 30, 2026</span>
+                <a
+                  href="https://coursera.org/verify/professional-cert/KNU3RQO7HA6X"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                >
+                  Verify certificate
+                  <ExternalLink aria-hidden="true" className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </div>
+
+            <Accordion type="single" collapsible className="certifications-accordion mt-8 border-t border-primary/15">
+              <AccordionItem value="courses" className="border-b-0">
+                <AccordionTrigger className="py-5 text-left text-sm font-semibold text-foreground hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4">
+                  <span>Explore the 8 course certificates</span>
+                </AccordionTrigger>
+                <AccordionContent className="certifications-content">
+                  <ol className="grid gap-3 pb-2 sm:grid-cols-2">
+                    {certificates.map((certificate, index) => (
+                      <li key={certificate.title}>
+                        <a
+                          href={certificate.verificationUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex h-full items-center justify-between gap-4 rounded-xl border border-border bg-white/80 p-4 transition-colors hover:border-primary/40 hover:bg-primary/[0.03]"
+                        >
+                          <span className="flex items-center gap-3">
+                            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-xs font-bold text-primary">
+                              {String(index + 1).padStart(2, "0")}
+                            </span>
+                            <span className="text-sm font-medium leading-5 text-foreground">{certificate.title}</span>
+                          </span>
+                          <ExternalLink aria-hidden="true" className="h-4 w-4 shrink-0 text-muted-foreground transition-colors group-hover:text-primary" />
+                        </a>
+                      </li>
+                    ))}
+                  </ol>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </article>
+        </div>
+      </section>
+
       {/* About Me Section */}
       <section className="about-section relative overflow-hidden bg-white px-6 py-16 text-foreground md:py-24">
         <div className="section-grid pointer-events-none absolute inset-0" />
         <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-stretch">
           <div className="flex flex-col justify-center lg:col-start-2 lg:row-start-1">
             <p className="section-kicker mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-              03 / About Me
+              04 / About Me
             </p>
             <h2 className="max-w-xl text-5xl font-semibold leading-[0.94] tracking-[-0.06em] md:text-7xl">
               I don’t just manage <em className="font-serif font-normal text-primary">feature requests.</em>
@@ -402,7 +520,7 @@ export default function Index() {
       <section className="experience-section relative overflow-hidden bg-secondary/30 py-20">
         <div className="section-grid pointer-events-none absolute inset-0" />
         <div className="relative max-w-6xl mx-auto px-6">
-          <p className="section-kicker mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">04 / Experience</p>
+          <p className="section-kicker mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">05 / Experience</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Experience</h2>
 
           <div className="experience-list space-y-8">
@@ -451,7 +569,7 @@ export default function Index() {
             <div>
               <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
                 <span className="skills-live-dot" />
-                05 / Technical Skills & Tools
+                06 / Technical Skills & Tools
               </p>
               <h2 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">
                 The toolkit behind <em className="font-serif font-normal text-primary">effective products.</em>
@@ -581,7 +699,7 @@ export default function Index() {
       <section id="connect" className="contact-section relative overflow-hidden py-20 bg-secondary/30">
         <div className="section-grid pointer-events-none absolute inset-0" />
         <div className="relative max-w-6xl mx-auto px-6">
-          <p className="section-kicker mb-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-primary">06 / Connect</p>
+          <p className="section-kicker mb-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-primary">07 / Connect</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             Let's Connect
           </h2>
