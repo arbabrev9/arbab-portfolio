@@ -369,16 +369,15 @@ export default function Index() {
               </div>
               <div className="flex shrink-0 flex-col gap-2 md:items-end">
                 <span className="w-fit rounded-full border border-emerald-600/20 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
-                  Completed
+                  Completed and verified certificate.
                 </span>
-                <span className="text-sm text-muted-foreground">September 30, 2026</span>
                 <a
                   href="https://coursera.org/verify/professional-cert/KNU3RQO7HA6X"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-primary/25 bg-white px-3 py-2 text-sm font-semibold text-primary shadow-sm transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 >
-                  Verify certificate
+                  Verify Certificate
                   <ExternalLink aria-hidden="true" className="h-3.5 w-3.5" />
                 </a>
               </div>
@@ -386,26 +385,35 @@ export default function Index() {
 
             <Accordion type="single" collapsible className="certifications-accordion mt-8 border-t border-primary/15">
               <AccordionItem value="courses" className="border-b-0">
-                <AccordionTrigger className="py-5 text-left text-sm font-semibold text-foreground hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4">
-                  <span>Explore the 8 course certificates</span>
+                <AccordionTrigger className="rounded-xl border border-primary/25 bg-primary/[0.06] px-4 py-4 text-left text-base font-bold text-primary shadow-sm hover:border-primary/50 hover:bg-primary/10 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
+                  <span>
+                    <span className="block">View all 8 course certificates</span>
+                    <span className="mt-1 block text-xs font-medium text-muted-foreground">
+                      All eight certificates are listed below
+                    </span>
+                  </span>
                 </AccordionTrigger>
                 <AccordionContent className="certifications-content">
-                  <ol className="grid gap-3 pb-2 sm:grid-cols-2">
+                  <ol className="grid gap-3 pb-2 md:grid-cols-2">
                     {certificates.map((certificate, index) => (
-                      <li key={certificate.title}>
+                      <li
+                        key={certificate.title}
+                        className="flex flex-col items-start gap-3 rounded-xl border border-border bg-white/80 p-4 transition-colors hover:border-primary/40 hover:bg-primary/[0.03] sm:flex-row sm:items-center sm:justify-between"
+                      >
+                        <span className="flex items-center gap-3">
+                          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-xs font-bold text-primary">
+                            {String(index + 1).padStart(2, "0")}
+                          </span>
+                          <span className="text-sm font-medium leading-5 text-foreground">{certificate.title}</span>
+                        </span>
                         <a
                           href={certificate.verificationUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group flex h-full items-center justify-between gap-4 rounded-xl border border-border bg-white/80 p-4 transition-colors hover:border-primary/40 hover:bg-primary/[0.03]"
+                          className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-primary/25 bg-white px-3 py-2 text-xs font-semibold text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                         >
-                          <span className="flex items-center gap-3">
-                            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-xs font-bold text-primary">
-                              {String(index + 1).padStart(2, "0")}
-                            </span>
-                            <span className="text-sm font-medium leading-5 text-foreground">{certificate.title}</span>
-                          </span>
-                          <ExternalLink aria-hidden="true" className="h-4 w-4 shrink-0 text-muted-foreground transition-colors group-hover:text-primary" />
+                          Verify Certificate
+                          <ExternalLink aria-hidden="true" className="h-3 w-3" />
                         </a>
                       </li>
                     ))}
